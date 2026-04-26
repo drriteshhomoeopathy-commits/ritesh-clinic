@@ -18959,7 +18959,7 @@ function Footer({ onNavigate }) {
             ]
           }
         ),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
           "div",
           {
             style: {
@@ -18973,31 +18973,11 @@ function Footer({ onNavigate }) {
               fontSize: "0.78rem",
               color: "rgba(255,255,255,0.4)"
             },
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                "© ",
-                currentYear,
-                " Ritesh Homeopathic Clinic. All rights reserved. | Dr. Ritesh Kumar Tiwary, Daltonganj, Jharkhand"
-              ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                "© ",
-                currentYear,
-                ". Built with love using",
-                " ",
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "a",
-                  {
-                    href: `https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(
-                      typeof window !== "undefined" ? window.location.hostname : "ritesh-clinic"
-                    )}`,
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                    style: { color: "#25a563", textDecoration: "none" },
-                    children: "caffeine.ai"
-                  }
-                )
-              ] })
-            ]
+            children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+              "© ",
+              currentYear,
+              " Ritesh Homeopathic Clinic. All rights reserved. | Dr. Ritesh Kumar Tiwary, Daltonganj, Jharkhand"
+            ] })
           }
         ),
         /* @__PURE__ */ jsxRuntimeExports.jsx("style", { children: `

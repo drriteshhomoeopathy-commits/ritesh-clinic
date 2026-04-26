@@ -83,7 +83,14 @@ export default function Footer({ onNavigate }: FooterProps) {
               {
                 href: "https://www.facebook.com/share/1792sFnYWf/",
                 label: "Facebook",
-                icon: "📘",
+                icon: (
+                  <img
+                    src="/assets/images/facebook-logo.png"
+                    alt=""
+                    aria-hidden="true"
+                    style={{ width: 18, height: 18, display: "block" }}
+                  />
+                ),
                 extraClass: "footer-social-btn",
               },
               {
@@ -221,21 +228,6 @@ export default function Footer({ onNavigate }: FooterProps) {
         <span>
           © {currentYear} Ritesh Homeopathic Clinic. All rights reserved. | Dr.
           Ritesh Kumar Tiwary, Daltonganj, Jharkhand
-        </span>
-        <span>
-          © {currentYear}. Built with love using{" "}
-          <a
-            href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(
-              typeof window !== "undefined"
-                ? window.location.hostname
-                : "ritesh-clinic",
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#25a563", textDecoration: "none" }}
-          >
-            caffeine.ai
-          </a>
         </span>
       </div>
 
