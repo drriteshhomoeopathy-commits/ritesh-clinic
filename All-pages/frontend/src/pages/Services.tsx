@@ -21,7 +21,7 @@ const SERVICES = [
       "Seborrheic Dermatitis",
       "Lichen Planus",
     ],
-    image: "/assets/images/piles-flyer.png",
+    image: "/assets/images/skindisorder.png",
   },
   {
     key: "hair",
@@ -38,7 +38,7 @@ const SERVICES = [
       "Scalp Psoriasis",
       "Post-Pregnancy Hair Loss",
     ],
-    image: "/assets/images/hairfall-flyer.jpg",
+    image: "/assets/images/hairprob.png",
   },
   {
     key: "allergy",
@@ -55,6 +55,8 @@ const SERVICES = [
       "Eye Allergies (Allergic Conjunctivitis)",
       "Insect Sting Allergies",
     ],
+    image: "/assets/images/allergy.png",
+    
   },
   {
     key: "migraine",
@@ -71,6 +73,7 @@ const SERVICES = [
       "Sinus Headaches",
       "Post-Traumatic Headaches",
     ],
+    image: "/assets/images/migrane.png",
   },
   {
     key: "child",
@@ -87,7 +90,7 @@ const SERVICES = [
       "Digestive Issues & Food Aversion",
       "Childhood Eczema & Skin Problems",
     ],
-    image: "/assets/images/pediatric-flyer.png",
+    image: "/assets/images/childcare.png",
   },
   {
     key: "chronic",
@@ -104,7 +107,7 @@ const SERVICES = [
       "Kidney Stones (Prevention & Management)",
       "Fatty Liver & Digestive Disorders",
     ],
-    image: "/assets/images/diabetes-flyer.jpg",
+    image: "/assets/images/chronic.png",
   },
   {
     key: "joint",
@@ -121,7 +124,7 @@ const SERVICES = [
       "Frozen Shoulder",
       "Sports Injuries (Chronic)",
     ],
-    image: "/assets/images/joint-pain-flyer.png",
+    image: "/assets/images/piles-flyer.png",
   },
   {
     key: "piles",

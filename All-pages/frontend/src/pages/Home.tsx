@@ -9,7 +9,7 @@ const WA_NUMBER = "918210485109";
 const WA_MSG = encodeURIComponent("Hello Dr. Ritesh, I need a consultation.");
 
 const STATS = [
-  { num: "10+", label: "Years Experience" },
+  { num: "5+", label: "Years Experience" },
   { num: "5000+", label: "Patients Treated" },
   { num: "95%", label: "Success Rate" },
   { num: "100%", label: "Natural Medicines" },
@@ -20,45 +20,51 @@ const SERVICES_PREVIEW = [
     icon: "🧴",
     title: "Skin Disorders",
     desc: "Eczema, psoriasis, acne, vitiligo — treated from the root.",
+    image: "assets/images/skindisorder.png",
+    
   },
   {
     icon: "💇",
     title: "Hair Problems",
     desc: "Hair fall, alopecia, dandruff — natural regrowth therapy.",
-    image: "/assets/images/hairfall-flyer.jpg",
+    image: "/assets/images/hairprob.png",
+    
   },
   {
     icon: "🤧",
     title: "Allergy & Asthma",
     desc: "Long-term immune correction for lasting relief.",
+    image: "/assets/images/allergy.png",
   },
   {
     icon: "🧠",
     title: "Migraine",
     desc: "Reduce frequency and severity without painkillers.",
+    image: "/assets/images/migrane.png"
   },
   {
     icon: "👶",
     title: "Child Care",
     desc: "Safe, gentle treatment for children of all ages.",
-    image: "/assets/images/pediatric-flyer.png",
+    image: "/assets/images/childcare.png",
   },
   {
     icon: "🩺",
     title: "Chronic Diseases",
     desc: "Diabetes, thyroid, arthritis — holistic management.",
-    image: "/assets/images/diabetes-flyer.jpg",
+    image: "/assets/images/chronic.png",
   },
 ];
 
 const CAROUSEL_ITEMS = [
-  { src: "/assets/images/hairfall-flyer.jpg", label: "Hair Fall Treatment" },
+  { src: "/assets/images/joint-pain-flyer.png", label: "Hair Fall Treatment" },
   { src: "/assets/images/diabetes-flyer.jpg", label: "Diabetes Management" },
-  { src: "/assets/images/piles-flyer.png", label: "Piles & Fistula Care" },
-  { src: "/assets/images/piles2-flyer.jpg", label: "Anorectal Disorders" },
-  { src: "/assets/images/joint-pain-flyer.png", label: "Joint Pain Relief" },
-  { src: "/assets/images/pediatric-flyer.png", label: "Paediatric Care" },
+  { src: "/assets/images/piles2-flyer.jpg", label: "Piles & Fistula Care" },
+  //{ src: "/assets/images/piles2-flyer.jpg", label: "Anorectal Disorders" },
+  { src: "/assets/images/piles-flyer.png", label: "Joint Pain Relief" },
+  { src: "/assets/images/doctor-consulting.png", label: "Paediatric Care" },
 ];
+
 
 function useFadeUpObserver() {
   useEffect(() => {
@@ -195,7 +201,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 textTransform: "uppercase",
               }}
             >
-              🌿 Trusted Homeopathic Care Since 2010
+              🌿 Modern Homeopathic Care Since 2022
             </div>
             <h1
               style={{
@@ -376,7 +382,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 }}
               >
                 <img
-                  src="/assets/images/clinic-medicine-shelf.jpg"
+                  src="/assets/images/rdoct.jpg"
                   alt="Dr. Ritesh Kumar Tiwary"
                   loading="lazy"
                   style={{
@@ -407,7 +413,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   marginBottom: 20,
                 }}
               >
-                BHMS, MD (Homeopathy)
+                B.H.M.S (Govt. Homoeopathic Medical College and Hospital Godda, Jharkhand)
               </div>
               <div
                 style={{ display: "flex", flexDirection: "column", gap: 10 }}
@@ -415,10 +421,10 @@ export default function Home({ onNavigate }: HomeProps) {
                 {[
                   {
                     icon: "🎓",
-                    text: "Qualified & Certified Homeopathic Physician",
+                    text: "Qualified & Certified Homeopathic Physician and Consultant",
                   },
                   { icon: "📍", text: "Daltonganj, Jharkhand, India" },
-                  { icon: "⏰", text: "Mon–Sat: 9AM–7PM | Sun: 10AM–2PM" },
+                  { icon: "⏰", text: "Mon–Sat: 9AM–3PM | Sun: 10AM–7PM" },
                   {
                     icon: "💊",
                     text: "Holistic & Side-Effect Free Treatments",

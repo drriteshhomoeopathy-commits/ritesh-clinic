@@ -76,7 +76,7 @@ export default function Contact({ onNavigate: _onNavigate }: ContactProps) {
         >
           {/* Address card — clickable */}
           <a
-            href="https://www.google.com/maps/place/Dr.+Ritesh+clinic+Homoeopathy+Daltonganj/@24.0318906,84.0850028,17z"
+            href="https://maps.app.goo.gl/93hGLixa1Z1YRpXN9?g_st=am"
             target="_blank"
             rel="noopener noreferrer"
             data-ocid="contact-card-address"
@@ -265,9 +265,9 @@ export default function Contact({ onNavigate: _onNavigate }: ContactProps) {
             >
               Monday – Saturday
               <br />
-              9:00 AM – 7:00 PM
+              9:00 AM – 3:00 PM
               <br />
-              Sunday: 10:00 AM – 2:00 PM
+              Sunday: 09:00 AM – 7:00 PM
             </p>
           </div>
         </div>
@@ -282,7 +282,7 @@ export default function Contact({ onNavigate: _onNavigate }: ContactProps) {
           }}
         >
           <iframe
-            src="https://maps.google.com/maps?q=24.0318906,84.0850028&z=17&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.906!2d84.0850028!3d24.0318906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398c77ce127717ad%3A0xf96b507b4bab3c87!2sDr.%20Ritesh%20clinic%20Homoeopathy!5e0!3m2!1sen!2sin!4v1710000000000"
             style={{
               width: "100%",
               height: 300,
