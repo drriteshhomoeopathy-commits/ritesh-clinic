@@ -455,7 +455,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 ))}
               </div>
               <a
-                href="tel:+916207962161"
+                href="tel:+918210485109"
                 className="btn-primary-hover"
                 data-ocid="hero-call-cta"
                 style={{

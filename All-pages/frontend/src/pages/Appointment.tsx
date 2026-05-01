@@ -6,7 +6,7 @@ interface AppointmentProps {
 }
 
 const WA_NUMBER = "918210485109";
-const CALL_NUMBER = "+916207962161";
+const CALL_NUMBER = "+918210485109";
 
 type FormState = {
   name: string;
@@ -175,7 +175,7 @@ export default function Appointment({
                     Call Us Directly
                   </strong>
                   <span style={{ fontSize: "0.78rem", color: "#5c7a66" }}>
-                    +91 6207962161 · Mon–Sat 9AM–7PM
+                    +91 8210485109 · Mon–Sat 9AM–7PM
                   </span>
                 </div>
               </a>

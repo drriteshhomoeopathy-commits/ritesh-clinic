@@ -6,7 +6,7 @@ interface ContactProps {
 
 const WA_NUMBER = "918210485109";
 const WA_MSG = encodeURIComponent("Hello Dr. Ritesh, I need a consultation.");
-const CALL_NUMBER = "+916207962161";
+const CALL_NUMBER = "+918210485109";
 
 export default function Contact({ onNavigate: _onNavigate }: ContactProps) {
   return (
@@ -195,7 +195,7 @@ export default function Contact({ onNavigate: _onNavigate }: ContactProps) {
                   display: "block",
                 }}
               >
-                +91 6207962161
+                +91 8210485109
               </a>
               <a
                 href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`}
