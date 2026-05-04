@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const WA_NUMBER = "918210485109";
-const CALL_NUMBER = "+916207962161";
+const CALL_NUMBER = "+918210485109";
 const WA_MSG = encodeURIComponent("Hello Dr. Ritesh, I need a consultation.");
 
 export default function FloatingActions() {
