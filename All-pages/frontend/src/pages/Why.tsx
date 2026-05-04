@@ -95,7 +95,7 @@ export default function Why({ onNavigate }: WhyProps) {
             marginBottom: 16,
           }}
         >
-          Why Choose Ritesh Homeopathic Clinic?
+          Why Choose Dr. Ritesh Homeopathic Clinic?
         </h2>
         <div
           style={{

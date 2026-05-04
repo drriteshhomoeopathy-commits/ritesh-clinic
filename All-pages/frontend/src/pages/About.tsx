@@ -148,7 +148,7 @@ export default function About({ onNavigate }: AboutProps) {
                 >
                   {[
                     "BHMS",
-                    "Homoeopathic Physician & Consultant",
+                     "Homoeopathic Physician & Consultant",
                     "5+ Years Exp.",
                     "5000+ Patients",
                   ].map((tag) => (
@@ -714,14 +714,12 @@ export default function About({ onNavigate }: AboutProps) {
                 }}
               >
                 <iframe
-                  //src="https://maps.google.com/maps?q=24.0318906,84.0850028&z=17&output=embed"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.906!2d84.0850028!3d24.0318906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398c77ce127717ad%3A0xf96b507b4bab3c87!2sDr.%20Ritesh%20clinic%20Homoeopathy!5e0!3m2!1sen!2sin!4v1710000000000"
                   style={{
                     width: "100%",
                     height: 280,
                     border: "none",
                     display: "block",
-                    
                   }}
                   allowFullScreen
                   loading="lazy"
@@ -763,11 +761,10 @@ export default function About({ onNavigate }: AboutProps) {
                       <br />
                       Opposite Ola Showroom, Daltonganj,
                       <br />
-                      Palamu, Jharkhand 822101 
+                      Palamu, Jharkhand 822101
                     </span>
                     <a
                       href="https://maps.app.goo.gl/93hGLixa1Z1YRpXN9?g_st=am"
-                     // href="https://www.google.com/maps/place/Dr.+Ritesh+clinic+Homoeopathy+Daltonganj/@24.0318906,84.0850028,17z"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{

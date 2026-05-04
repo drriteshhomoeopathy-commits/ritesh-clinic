@@ -63,7 +63,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               display: "block",
             }}
           >
-            🌿 Ritesh Homeopathic Clinic
+            🌿 Dr. Ritesh Homeopathic Clinic
           </span>
           <p
             style={{
@@ -105,6 +105,19 @@ export default function Footer({ onNavigate }: FooterProps) {
                 icon: "💬",
                 extraClass: "footer-social-wa",
               },
+              {
+                href: "https://www.youtube.com/@DrRiteshHOMOEOPATHYClinic/featured",
+                label: "YouTube",
+                icon: (
+                  <img
+                    src="/assets/images/youtube.jpg"
+                    alt=""
+                    aria-hidden="true"
+                    style={{ width: 25, height: 15, display: "block" }}
+                  />
+                ),
+                extraClass: "footer-social-btn",
+              }
             ].map(({ href, label, icon, extraClass }) => (
               <a
                 key={label}
@@ -226,7 +239,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         }}
       >
         <span>
-          © {currentYear} Ritesh Homeopathic Clinic. All rights reserved. | Dr.
+          © {currentYear} Dr. Ritesh Homeopathic Clinic. All rights reserved. | Dr.
           Ritesh Kumar Tiwary, Daltonganj, Jharkhand
         </span>
       </div>

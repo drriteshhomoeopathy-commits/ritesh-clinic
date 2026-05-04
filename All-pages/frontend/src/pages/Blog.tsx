@@ -194,7 +194,7 @@ export default function Blog({ onNavigate }: BlogProps) {
                   }}
                     style={{
                       position: "relative",
-                      height: 160,
+                      height: 280,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",

@@ -267,7 +267,7 @@ export default function Contact({ onNavigate: _onNavigate }: ContactProps) {
               <br />
               9:00 AM – 3:00 PM
               <br />
-              Sunday: 09:00 AM – 7:00 PM
+              Sunday: 10:00 AM – 7:00 PM
             </p>
           </div>
         </div>

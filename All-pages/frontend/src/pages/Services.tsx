@@ -56,7 +56,6 @@ const SERVICES = [
       "Insect Sting Allergies",
     ],
     image: "/assets/images/allergy.png",
-    
   },
   {
     key: "migraine",

@@ -27,13 +27,14 @@ const TESTIMONIALS = [
   },
   {
     stars: "★★★★★",
-    text: "I was suffering from severe joint pain that made daily activities very difficult. After 3 months of homeopathic treatment, my pain has reduced significantly and I can move comfortably again. Dr. Tiwary's approach is truly holistic.",
-    name: "Ramesh Singh",
-    loc: "Palamu, Jharkhand",
+    text: "I was suffering from severe joint pain that made daily activities very difficult. After 2 months of homeopathic treatment, my pain has reduced significantly and I can move comfortably again. Dr. Tiwary's approach is truly holistic.",
+    name: "Dhanesh yadav",
+    loc: "Chianki , Daltonganj",
     initial: "P",
     videoId: "EbzHP-Riops",
-    id: "RameshSingh"
+    id: "Dhanesh yadav"
   },
+  
 ];
 
 export default function Reviews({ onNavigate }: ReviewsProps) {
@@ -129,7 +130,7 @@ export default function Reviews({ onNavigate }: ReviewsProps) {
                     imageSrc = "/assets/images/clinic-billboard-night.jpg";
                   } else if (id === "ArunKumarSingh") {
                     imageSrc = "/assets/images/clinic-medicine-shelf.jpg";
-                  } else if (id === "RameshSingh") {
+                  } else if (id === "Dhanesh yadav") {
                     imageSrc = "/assets/images/clinic-reception.jpg";
                   }
 
@@ -219,7 +220,7 @@ export default function Reviews({ onNavigate }: ReviewsProps) {
                     />
                   </div>
                 )}
-                 {id === "RameshSingh" && (
+                 {id === "Dhanesh yadav" && (
                   <div onClick={(e) => {
                     e.stopPropagation();
                     setActiveVideo(videoId);
