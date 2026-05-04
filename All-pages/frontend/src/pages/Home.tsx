@@ -135,7 +135,7 @@ export default function Home({ onNavigate }: HomeProps) {
             "radial-gradient(ellipse 80% 60% at 60% 30%, rgba(37,165,99,0.15) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 10% 80%, rgba(13,107,59,0.1) 0%, transparent 60%), linear-gradient(160deg, #f0faf5 0%, #e8f7f0 40%, #d4f4e3 100%)",
           display: "flex",
           alignItems: "center",
-          padding: "100px 24px 60px",
+          padding: "50px 24px 60px",
           position: "relative",
           overflow: "hidden",
           marginTop: 70,
