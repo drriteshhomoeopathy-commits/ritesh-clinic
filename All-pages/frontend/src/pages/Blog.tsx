@@ -8,7 +8,8 @@ interface BlogProps {
 const BLOG_POSTS = [
   {
     id: "hair-fall",
-    icon: "💇",
+    videoId: "tC-WNBI1Y0M",
+    icon: "",
     tag: "Hair Care",
     title: "Best Homeopathy Treatment for Hair Fall in Daltonganj",
     date: "March 2024",
@@ -35,7 +36,8 @@ Dr. Ritesh Kumar Tiwary (BHMS, MD Homeopathy) has treated over 500 cases of hair
   },
   {
     id: "skin",
-    icon: "🧴",
+    videoId: "brIbYr6ph2M",
+    icon: "",
     tag: "Skin Health",
     title: "Permanent Treatment for Skin Diseases with Homeopathy",
     date: "February 2024",
@@ -65,7 +67,9 @@ If you have been told your skin disease is 'chronic' or 'incurable', we invite y
   },
   {
     id: "homeopathy-vs-allopathy",
-    icon: "🌿",
+    icon: " ",
+    videoId: "brIbYr6ph2M",
+
     tag: "Homeopathy Explained",
     title: "Why Choose Homeopathy Over Allopathy?",
     date: "January 2024",
@@ -100,7 +104,7 @@ At Ritesh Homeopathic Clinic, Dr. Tiwary always advises patients clearly about w
 export default function Blog({ onNavigate }: BlogProps) {
   const [activePost, setActivePost] = useState<string | null>(null);
   const post = BLOG_POSTS.find((p) => p.id === activePost);
-
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
   return (
     <section
       style={{ padding: "80px 24px", background: "white", marginTop: 70 }}
@@ -164,11 +168,11 @@ export default function Blog({ onNavigate }: BlogProps) {
             className="blog-grid"
           >
             {BLOG_POSTS.map(
-              ({ id, icon, tag, title, date, readTime, summary }) => (
+              ({ id, icon, tag, videoId, title, date, readTime, summary }) => (
                 <button
                   key={id}
                   type="button"
-                  onClick={() => setActivePost(id)}
+
                   data-ocid={`blog-card-${id}`}
                   className="blog-card-hover"
                   style={{
@@ -184,17 +188,239 @@ export default function Blog({ onNavigate }: BlogProps) {
                     padding: 0,
                   }}
                 >
-                  <div
+                  <div onClick={(e) => {
+                    e.stopPropagation();
+                    setActiveVideo(videoId);
+                  }}
                     style={{
-                      background: "linear-gradient(135deg, #f0faf5, #d4f4e3)",
-                      padding: "28px 24px 20px",
-                      fontSize: "2.5rem",
-                      textAlign: "center",
+                      position: "relative",
+                      height: 280,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      overflow: "hidden",
                     }}
                   >
-                    {icon}
+                    {/* YouTube Background Video */}
+                    {id === "hair-fall" ? (
+                      <img
+                        src="/assets/images/clinic-billboard-night.jpg"
+                        alt="hair-fall"
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          width: "130%",
+                          height: "130%",
+                          transform: "translate(-50%, -50%)",
+                          objectFit: "cover",
+                          pointerEvents: "none",
+                        }}
+                      />
+
+                    ) : (
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          background: "linear-gradient(135deg, #f0faf5, #d4f4e3)",
+                        }}
+                      />
+                    )}
+                    {id === "skin" ? (
+                      <img
+                        src="/assets/images/clinic-medicine-shelf.jpg"
+                        alt="skin"
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          width: "130%",
+                          height: "130%",
+                          transform: "translate(-50%, -50%)",
+                          objectFit: "cover",
+                          pointerEvents: "none",
+                        }}
+                      />
+
+                    ) : (
+                      <div
+                        style={{
+                          position: "relative",
+                          inset: 0,
+                          background: "linear-gradient(135deg, #f0faf5, #d4f4e3)",
+                        }}
+                      />
+                    )}
+                     {id === "homeopathy-vs-allopathy" ? (
+                      <img
+                        src="/assets/images/clinic-reception.jpg"
+                        alt="homeopathy-vs-allopathy"
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          width: "130%",
+                          height: "130%",
+                          transform: "translate(-50%, -50%)",
+                          objectFit: "cover",
+                          pointerEvents: "none",
+                        }}
+                      />
+
+                    ) : (
+                      <div
+                        style={{
+                          position: "relative",
+                          inset: 0,
+                          background: "linear-gradient(135deg, #f0faf5, #d4f4e3)",
+                        }}
+                      />
+                    )}
+                    {id === "hair-fall" && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          transform: "translate(-50%, -50%)",
+                          zIndex: 2,
+                          width: 70,
+                          height: 70,
+                          borderRadius: "50%",
+                          background: "rgba(255,255,255,0.9)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          cursor: "pointer",
+                        }}
+                      >
+                        {/* Play Icon */}
+                        <div
+                          style={{
+                            width: 0,
+                            height: 0,
+                            borderTop: "10px solid transparent",
+                            borderBottom: "10px solid transparent",
+                            borderLeft: "16px solid black",
+                            marginLeft: "4px",
+                          }}
+                        />
+                      </div>
+                    )}
+                     {id === "skin" && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          transform: "translate(-50%, -50%)",
+                          zIndex: 2,
+                          width: 70,
+                          height: 70,
+                          borderRadius: "50%",
+                          background: "rgba(255,255,255,0.9)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          cursor: "pointer",
+                        }}
+                      >
+                        {/* Play Icon */}
+                        <div
+                          style={{
+                            width: 0,
+                            height: 0,
+                            borderTop: "10px solid transparent",
+                            borderBottom: "10px solid transparent",
+                            borderLeft: "16px solid black",
+                            marginLeft: "4px",
+                          }}
+                        />
+                      </div>
+                    )}
+                     {id === "homeopathy-vs-allopathy" && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          transform: "translate(-50%, -50%)",
+                          zIndex: 2,
+                          width: 70,
+                          height: 70,
+                          borderRadius: "50%",
+                          background: "rgba(255,255,255,0.9)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          cursor: "pointer",
+                        }}
+                      >
+                        {/* Play Icon */}
+                        <div
+                          style={{
+                            width: 0,
+                            height: 0,
+                            borderTop: "10px solid transparent",
+                            borderBottom: "10px solid transparent",
+                            borderLeft: "16px solid black",
+                            marginLeft: "4px",
+                          }}
+                        />
+                      </div>
+                    )}
+                    {/* Overlay */}
+                    {id === "hair-fall" && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          background: "rgba(0,0,0,0.4)",
+                        }}
+                      />
+                    )}
+                     {id === "skin" && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          background: "rgba(0,0,0,0.4)",
+                        }}
+                      />
+                    )}
+                     {id === "homeopathy-vs-allopathy" && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          background: "rgba(0,0,0,0.4)",
+                        }}
+                      />
+                    )}
+                    {/* Icon */}
+                    <span
+                      style={{
+                        position: "relative",
+                        zIndex: 2,
+                        fontSize: "2.5rem",
+                        color: id === "hair-fall" ? "white" : "inherit",
+                      }}
+                    >
+                      {icon}
+                    </span>
+                    <span
+                      style={{
+                        position: "relative",
+                        zIndex: 2,
+                        fontSize: "2.5rem",
+                        color: id === "skin" ? "white" : "inherit",
+                      }}
+                    >
+                      {icon}
+                    </span>
                   </div>
-                  <div style={{ padding: "20px 24px 24px" }}>
+                  <div onClick={() => setActivePost(id)} style={{ padding: "20px 24px 24px" }}>
                     <div
                       style={{
                         display: "flex",
@@ -254,10 +480,16 @@ export default function Blog({ onNavigate }: BlogProps) {
                       Read Full Article →
                     </span>
                   </div>
+
                 </button>
+
               ),
-            )}
+
+            )
+
+            }
           </div>
+
         ) : post ? (
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
             <button
@@ -483,8 +715,64 @@ export default function Blog({ onNavigate }: BlogProps) {
             </div>
           </div>
         ) : null}
-      </div>
 
+      </div>
+      {/* ✅ SINGLE MODAL OUTSIDE */}
+      {activeVideo && (
+        <div
+          onClick={() => setActiveVideo(null)}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "rgba(0,0,0,0.7)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 9999,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: "relative",
+              width: "80%",
+              maxWidth: "800px",
+              background: "#000",
+              borderRadius: "10px",
+              overflow: "hidden",
+            }}
+          >
+            {/* Close */}
+            <span
+              onClick={() => setActiveVideo(null)}
+              style={{
+                position: "absolute",
+                top: 10,
+                right: 15,
+                fontSize: "24px",
+                color: "#fff",
+                cursor: "pointer",
+                zIndex: 10,
+              }}
+            >
+              ✕
+            </span>
+
+            {/* Dynamic Video */}
+            <iframe
+              width="100%"
+              height="400"
+              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
       <style>{`
         @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr) !important; } }
         @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr !important; } }

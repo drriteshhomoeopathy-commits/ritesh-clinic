@@ -97,7 +97,7 @@ export default function Nav({ activePage, onNavigate }: NavProps) {
                 color: "#0d6b3b",
               }}
             >
-              Ritesh Homeopathic Clinic
+              Dr. Ritesh Homeopathic Clinic
             </strong>
             <span style={{ fontSize: "0.7rem", color: "#5c7a66" }}>
               Daltonganj, Jharkhand
