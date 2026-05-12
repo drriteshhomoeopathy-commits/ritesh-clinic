@@ -7,15 +7,15 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.drriteshclinic.com/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- About / Doctor Profile -->
+  <!-- About -->
   <url>
     <loc>https://www.drriteshclinic.com/about</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,63 +23,47 @@
   <!-- Services -->
   <url>
     <loc>https://www.drriteshclinic.com/services</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Skin Disease Treatment -->
+  <!-- Why Choose Us -->
   <url>
-    <loc>https://www.drriteshclinic.com/services/skin-disease-treatment</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://www.drriteshclinic.com/why</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Patient Reviews -->
+  <url>
+    <loc>https://www.drriteshclinic.com/reviews</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://www.drriteshclinic.com/blog</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Hair Fall Treatment -->
+  <!-- Book Appointment -->
   <url>
-    <loc>https://www.drriteshclinic.com/services/hair-fall-treatment</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://www.drriteshclinic.com/appointment</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Allergy Treatment -->
-  <url>
-    <loc>https://www.drriteshclinic.com/services/allergy-treatment</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Migraine Treatment -->
-  <url>
-    <loc>https://www.drriteshclinic.com/services/migraine-treatment</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Child Care -->
-  <url>
-    <loc>https://www.drriteshclinic.com/services/child-care</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Chronic Disease -->
-  <url>
-    <loc>https://www.drriteshclinic.com/services/chronic-disease-management</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
   <!-- Contact -->
   <url>
     <loc>https://www.drriteshclinic.com/contact</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
