@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export type PageId = 
+export type PageId =
   | "home"
   | "about"
   | "services"
@@ -10,20 +11,51 @@ export type PageId =
   | "appointment"
   | "contact";
 
-const pageTitles: Record<PageId, string> = {
-  home: 'Ritesh Homeopathic Clinic | Best Homeopathy Doctor in Daltonganj, Jharkhand',
-  about: 'Dr. Ritesh Kumar Tiwary | Experienced Homeopathic Physician in Daltonganj',
-  services: 'Homeopathy Services | Skin, Hair, Allergy & Chronic Disease Treatment',
-  why: 'Why Choose Ritesh Homeopathic Clinic | Benefits of Natural Healing',
-  reviews: 'Patient Success Stories | Homeopathy Reviews Daltonganj',
-  blog: 'Homeopathy Blog | Natural Health Tips & Treatment Insights',
-  appointment: 'Book Appointment | Online Homeopathy Consultation Daltonganj',
-  contact: 'Contact Us | Ritesh Homeopathic Clinic Location & Hours'
+const pageMeta: Record<PageId, { title: string; description: string; canonical: string }> = {
+  home: {
+    title: 'Ritesh Homeopathic Clinic | Best Homeopathy Doctor in Daltonganj, Jharkhand',
+    description: 'Dr. Ritesh Kumar Tiwary (BHMS) - Expert homoeopathy treatment in Daltonganj, Jharkhand.',
+    canonical: 'https://www.drriteshclinic.com/'
+  },
+  about: {
+    title: 'Dr. Ritesh Kumar Tiwary | Experienced Homeopathic Physician in Daltonganj',
+    description: 'Learn about Dr. Ritesh Kumar Tiwary BHMS, expert homeopathy doctor in Daltonganj, Jharkhand.',
+    canonical: 'https://www.drriteshclinic.com/about'
+  },
+  services: {
+    title: 'Homeopathy Services | Skin, Hair, Allergy & Chronic Disease Treatment',
+    description: 'Expert homeopathy treatment for skin, hair, allergies, migraine and chronic diseases in Daltonganj.',
+    canonical: 'https://www.drriteshclinic.com/services'
+  },
+  why: {
+    title: 'Why Choose Ritesh Homeopathic Clinic | Benefits of Natural Healing',
+    description: 'Discover why 5000+ patients trust Dr. Ritesh Kumar Tiwary for homeopathy treatment in Daltonganj.',
+    canonical: 'https://www.drriteshclinic.com/why'
+  },
+  reviews: {
+    title: 'Patient Success Stories | Homeopathy Reviews Daltonganj',
+    description: 'Read real patient reviews and success stories from Ritesh Homeopathic Clinic in Daltonganj.',
+    canonical: 'https://www.drriteshclinic.com/reviews'
+  },
+  blog: {
+    title: 'Homeopathy Blog | Natural Health Tips & Treatment Insights',
+    description: 'Read expert homeopathy health tips and treatment insights from Dr. Ritesh Kumar Tiwary.',
+    canonical: 'https://www.drriteshclinic.com/blog'
+  },
+  appointment: {
+    title: 'Book Appointment | Online Homeopathy Consultation Daltonganj',
+    description: 'Book your appointment with Dr. Ritesh Kumar Tiwary for expert homeopathy consultation in Daltonganj.',
+    canonical: 'https://www.drriteshclinic.com/appointment'
+  },
+  contact: {
+    title: 'Contact Us | Ritesh Homeopathic Clinic Location & Hours',
+    description: 'Contact Ritesh Homeopathic Clinic in Daltonganj. Find our location, phone number and clinic hours.',
+    canonical: 'https://www.drriteshclinic.com/contact'
+  }
 };
 
 export function usePageNavigation(initialPage: PageId = 'home') {
   const [activePage, setActivePage] = useState<PageId>(() => {
-    // Get page from URL path (no hash)
     const path = window.location.pathname.slice(1);
     const validPages: PageId[] = [
       'home', 'about', 'services', 'why', 'reviews', 'blog', 'appointment', 'contact'
@@ -33,21 +65,30 @@ export function usePageNavigation(initialPage: PageId = 'home') {
 
   const navigate = (page: PageId) => {
     setActivePage(page);
-    document.title = pageTitles[page];
-    
-    // Update URL without hash
     const newUrl = page === 'home' ? '/' : `/${page}`;
     window.history.pushState({ page }, '', newUrl);
-    
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Update title when page changes
   useEffect(() => {
-    document.title = pageTitles[activePage];
+    const meta = pageMeta[activePage];
+    document.title = meta.title;
+
+    // Update canonical tag
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', meta.canonical);
+
+    // Update meta description
+    let desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute('content', meta.description);
+
   }, [activePage]);
 
-  // Handle browser back/forward buttons
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname.slice(1);
@@ -56,9 +97,8 @@ export function usePageNavigation(initialPage: PageId = 'home') {
       ];
       const newPage = validPages.includes(path as PageId) ? (path as PageId) : 'home';
       setActivePage(newPage);
-      document.title = pageTitles[newPage];
     };
-    
+
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
