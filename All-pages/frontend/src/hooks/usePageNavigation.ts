@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 export type PageId =
   | "home"
@@ -74,17 +73,14 @@ export function usePageNavigation(initialPage: PageId = 'home') {
     const meta = pageMeta[activePage];
     document.title = meta.title;
 
-    // Update canonical tag
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
+    // ✅ Find canonical by ID (won't conflict with index.html)
+    const canonical = document.getElementById('canonical-tag') as HTMLLinkElement;
+    if (canonical) {
+      canonical.setAttribute('href', meta.canonical);
     }
-    canonical.setAttribute('href', meta.canonical);
 
     // Update meta description
-    let desc = document.querySelector('meta[name="description"]');
+    const desc = document.querySelector('meta[name="description"]');
     if (desc) desc.setAttribute('content', meta.description);
 
   }, [activePage]);
