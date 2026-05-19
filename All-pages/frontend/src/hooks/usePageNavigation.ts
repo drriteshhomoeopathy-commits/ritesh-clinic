@@ -12,7 +12,7 @@ export type PageId =
 
 const pageMeta: Record<PageId, { title: string; description: string; canonical: string }> = {
   home: {
-    title: 'Ritesh Homeopathic Clinic | Best Homeopathy Doctor in Daltonganj, Jharkhand',
+    title: 'Dr. Ritesh clinic Homoeopathy Daltonganj | Best Homeopathy Doctor in Daltonganj',
     description: 'Dr. Ritesh Kumar Tiwary (BHMS) - Expert homoeopathy treatment in Daltonganj, Jharkhand.',
     canonical: 'https://www.drriteshclinic.com/'
   },
@@ -101,3 +101,4 @@ export function usePageNavigation(initialPage: PageId = 'home') {
 
   return { activePage, navigate };
 }
+
